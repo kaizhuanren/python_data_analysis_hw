@@ -11,17 +11,17 @@ def main():
     """
     项目主流程
     """
-    if not os.path.exists(DATA_DIR):
-        os.makedirs(DATA_DIR)
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
-    print("=" * 50)
-    print("学术论文发表趋势分析项目启动")
-    print("=" * 50)
-    # 项目主流程入口
-    process_data()
-    print("\n--- 步骤 3: 开始数据分析与可视化 ---")
-    run_analysis()
+    # if not os.path.exists(DATA_DIR):
+    #     os.makedirs(DATA_DIR)
+    # if not os.path.exists(OUTPUT_DIR):
+    #     os.makedirs(OUTPUT_DIR)
+    # print("=" * 50)
+    # print("学术论文发表趋势分析项目启动")
+    # print("=" * 50)
+    # # 项目主流程入口
+    # process_data()
+    # print("\n--- 步骤 3: 开始数据分析与可视化 ---")
+    # run_analysis()
     print("\n--- 步骤 4: 开始预测下一届论文数量 ---")
     predict_next_year_counts()
     print("\n" + "=" * 50)
