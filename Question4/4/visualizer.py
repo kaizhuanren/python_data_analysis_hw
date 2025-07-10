@@ -105,6 +105,17 @@ def visualize_expert_data(input_path='cleaned_expert_data.csv'):
     plt.savefig('output/文章数量与单位彩龄中奖率关系.png')
     plt.show()
 
+    # 新增：单位彩龄中奖率 vs 彩龄(年)
+    plt.figure(figsize=(10, 6))
+    sns.scatterplot(data=df, x='彩龄(年)', y='单位彩龄中奖率', alpha=0.6)
+    sns.regplot(data=df, x='彩龄(年)', y='单位彩龄中奖率', scatter=False, color='red')
+    plt.title('彩龄与单位彩龄中奖率的关系')
+    plt.xlabel('彩龄 (年)')
+    plt.ylabel('单位彩龄中奖率')
+    plt.grid(True)
+    plt.savefig('output/彩龄与单位彩龄中奖率关系.png')
+    plt.show()
+
     # 新增：等级 vs 单位彩龄中奖率
     plt.figure(figsize=(12, 7))
     sns.boxplot(data=df, x='双色球专家等级', y='单位彩龄中奖率', order=level_order)
